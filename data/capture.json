@@ -1,0 +1,277 @@
+{
+  "records": {
+    "x": [
+      0,
+      3,
+      8,
+      11
+    ],
+    "y": [
+      0,
+      4,
+      7
+    ],
+    "crop": [
+      1,
+      11,
+      0,
+      7
+    ],
+    "owners": {
+      "scan-a": [
+        0,
+        2,
+        0,
+        2
+      ],
+      "scan-b": [
+        0,
+        2,
+        2,
+        3
+      ]
+    },
+    "targets": [
+      {
+        "id": "t01",
+        "group": "marked",
+        "box": [
+          1,
+          8,
+          0,
+          5
+        ],
+        "priority": 1,
+        "coverage": 0.8
+      },
+      {
+        "id": "t02",
+        "group": "marked",
+        "box": [
+          4,
+          11,
+          2,
+          7
+        ],
+        "priority": 2,
+        "coverage": 0.65
+      },
+      {
+        "id": "t05",
+        "group": "locate",
+        "box": [
+          3,
+          9,
+          0,
+          6
+        ],
+        "priority": 0,
+        "coverage": 0.7
+      }
+    ],
+    "inputs": [
+      {
+        "tile": "A",
+        "source": "scan-a",
+        "slice": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "rev": 1,
+        "fields": "a"
+      },
+      {
+        "tile": "B",
+        "source": "scan-b",
+        "slice": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "rev": 1,
+        "fields": "b"
+      },
+      {
+        "close_sources": true,
+        "dataset": "scan1"
+      },
+      {
+        "tile": "A",
+        "source": "scan-a",
+        "slice": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "rev": 2,
+        "fields": "ar",
+        "dataset": "scan2"
+      },
+      {
+        "new_priority": {
+          "t01": 3
+        },
+        "dataset": "scan2"
+      }
+    ]
+  },
+  "tensors": {
+    "a_valid": {
+      "dtype": "bool",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "a_intensity": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    "a_amount": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          9,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "ar_valid": {
+      "dtype": "bool",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "ar_intensity": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    "ar_amount": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          9,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "b_valid": {
+      "dtype": "bool",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "b_intensity": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          99,
+          3
+        ],
+        [
+          99,
+          2
+        ]
+      ]
+    },
+    "b_amount": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        2
+      ],
+      "values": [
+        [
+          99,
+          5
+        ],
+        [
+          99,
+          8
+        ]
+      ]
+    }
+  }
+}

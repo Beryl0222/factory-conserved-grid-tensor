@@ -1,0 +1,9 @@
+{
+  "rows": 1200,
+  "cols": 560,
+  "target_count": 27000,
+  "tiles": 44,
+  "groups": 3,
+  "peak_scratch_bytes": 16777216,
+  "seed": 330
+}
